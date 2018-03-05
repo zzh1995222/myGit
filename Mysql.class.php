@@ -59,19 +59,7 @@ class Mysql{
         $this->sql = $sql;
         return mysql_query($sql);
     }
-
-    /**
-     * 从指定表返回一条记录
-     * @param $id 需返回记录id
-     * @param $table 操作表名
-     */
-    public function getOne($id,$table){
-        $sql = "select * from {$table} where id=$id";
-        $res = mysql_query($sql);
-        $data = mysql_fetch_assoc($res);
-        return $data;
-    }
-
+    
     /**
      * 获取上一条sql语句
      */

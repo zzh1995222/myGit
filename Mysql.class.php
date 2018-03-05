@@ -59,12 +59,19 @@ class Mysql{
         $this->sql = $sql;
         return mysql_query($sql);
     }
-    
+
     /**
      * 获取上一条sql语句
      */
     public function getLastSql(){
         return $this->sql;
+    }
+
+    /**
+     * 关闭mysql连接
+     */
+    public function close(){
+        mysql_close($this->link);
     }
 
 }
